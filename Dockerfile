@@ -3,7 +3,7 @@ FROM openjdk:19-bullseye
 WORKDIR /run
 
 RUN apt update -q && apt -y install wget
-RUN curl https://api.github.com/repos/jagrosh/musicbot/releases/latest |\
+RUN curl https://api.github.com/repos/Steanky/musicbot/releases/latest |\
     grep 'browser_download_url' |\
     cut -d'"' -f4 |\
     wget -i - -O jmusicbot.jar
